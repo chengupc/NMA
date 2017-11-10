@@ -1,0 +1,16 @@
+#首先，需要原始的xyz和震动谱中找到一一对应的结果和谱(因为谱是109864个，而结构是109865个）
+import numpy as np
+
+list_num = []
+for i in range(110000):
+    try :
+        f = open('IR_raw/s%06d.dat'%i)
+        list_num.append(i)
+        f.close()
+    except IOError:
+        pass
+list_numpy = np.array(list_num)
+
+np.save('list_numpy.npy',list_numpy)
+~                                                                                                                                                                                 
+~                                             
